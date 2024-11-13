@@ -48,6 +48,13 @@ https://docs.godotengine.org/en/stable/index.html
 
 **Pleakley:** Ok, but I really don't even know where to start! Can you help me brainstorm??
 
+**Jace:** I thought you might have trouble, so I came up with a **theme** for the game jam, to get your brainstorm brewing.
+
+## Theme:
+
+The theme is the title of the starter game. If you are using the starter game, you will find it as soon as you press the play button. If you aren't using it and don't want to install godot and clone the repo. you can find it by exploring 
+
+
 ## Step 4: Play your game!!
 
 Play the game as you go. Let a conversation between you and the game begin. What does the game want you to do? Can you figure out how to do it? Think simple at first, and follow my hard-earned tips. Getting **anything** to work is an accomplishment. 

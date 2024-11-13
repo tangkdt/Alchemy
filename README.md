@@ -52,7 +52,7 @@ https://docs.godotengine.org/en/stable/index.html
 
 ## Theme:
 
-The theme is the title of the starter game. If you are using the starter game, you will find it as soon as you press the play button. If you aren't using it and don't want to install godot and clone the repo. you can find it by exploring 
+The theme is the title of the starter game. If you are using the starter game, you will find it as soon as you press the play button. If you aren't using it and don't want to install godot and clone the repo. you can find it by looking for **the text field from name="Name"** in **_common/start_screen.tscn**.
 
 
 ## Step 4: Play your game!!

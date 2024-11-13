@@ -1,0 +1,28 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://5vaqpc5yciov"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1wtta"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mr5li"]
+bg_color = Color(0.662906, 0.0857377, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jmhsn"]
+bg_color = Color(0.234761, 0.712616, 0.220071, 1)
+
+[resource]
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 4
+Button/font_sizes/font_size = 30
+Button/styles/focus = SubResource("StyleBoxEmpty_1wtta")
+CheckBox/font_sizes/font_size = 12
+GridContainer/constants/h_separation = 16
+GridContainer/constants/v_separation = 4
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 8
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 30
+MarginContainer/constants/margin_bottom = 8
+MarginContainer/constants/margin_left = 8
+MarginContainer/constants/margin_right = 8
+MarginContainer/constants/margin_top = 8
+ProgressBar/styles/background = SubResource("StyleBoxFlat_mr5li")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_jmhsn")

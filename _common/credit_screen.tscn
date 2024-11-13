@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://8cma6mur4xhm"]
+
+[ext_resource type="Shader" path="res://_common/shaders/scrolling_background.gdshader" id="1_u3n2b"]
+[ext_resource type="Script" path="res://_common/game_menu.gd" id="1_vdana"]
+[ext_resource type="Theme" uid="uid://5vaqpc5yciov" path="res://_common/main_theme.tres" id="3_y4704"]
+[ext_resource type="Texture2D" uid="uid://buxlufc86is5u" path="res://icon.svg" id="6_tvu0c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6xqj2"]
+shader = ExtResource("1_u3n2b")
+shader_parameter/direction = Vector2(1, 1)
+shader_parameter/alpha = 0.5
+
+[node name="CreditScreen" type="Node2D"]
+script = ExtResource("1_vdana")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_6xqj2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_tvu0c")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -580.0
+offset_top = -292.0
+offset_right = 580.0
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_y4704")
+
+[node name="Name" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 100
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_y4704")
+
+[node name="Name" type="Label" parent="CanvasLayer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Jace King
+and his cat Pleakley"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back to Menu"
+
+[node name="Control" type="Control" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25

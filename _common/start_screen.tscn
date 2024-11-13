@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://cs08dwnrlb8sc"]
+
+[ext_resource type="Script" path="res://_common/start_screen.gd" id="1_p0qrx"]
+[ext_resource type="Theme" uid="uid://5vaqpc5yciov" path="res://_common/main_theme.tres" id="2_jovfd"]
+[ext_resource type="Shader" path="res://_common/shaders/scrolling_background.gdshader" id="2_p6cbr"]
+[ext_resource type="Texture2D" uid="uid://buxlufc86is5u" path="res://icon.svg" id="6_d78v2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qhfm8"]
+shader = ExtResource("2_p6cbr")
+shader_parameter/direction = Vector2(1, 1)
+shader_parameter/alpha = 0.5
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_p0qrx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_qhfm8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_d78v2")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_jovfd")
+
+[node name="Name" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 50
+text = "Stay in Your Lane"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="GridContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="GameMode1" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Survival"
+
+[node name="GameMode2" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Frogger"
+
+[node name="Credits" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Credits"
+
+[node name="Exit" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Exit"
+
+[node name="Control" type="Control" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/GameMode1" to="." method="_load_game_mode_1"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/GameMode2" to="." method="_load_game_mode_2"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/Credits" to="." method="_load_credits"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/Exit" to="." method="_exit_game"]

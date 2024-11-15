@@ -5,7 +5,7 @@ var current_scene_instance
 
 var main_menu: PackedScene = load("res://_common/start_screen.tscn")
 var credit_screen: PackedScene = load("res://_common/credit_screen.tscn")
-var game_modes: Array[PackedScene] = [load("res://survival.tscn"), load("res://frogger.tscn")]
+var game_modes: Array[PackedScene] = [load("res://game_modes/survival.tscn"), load("res://game_modes/frogger.tscn")]
 
 
 func transition_to(scene: PackedScene):

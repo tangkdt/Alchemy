@@ -70,3 +70,5 @@ text = "Back to Menu"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_back_to_main"]

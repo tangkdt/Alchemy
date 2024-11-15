@@ -47,11 +47,7 @@ https://docs.godotengine.org/en/stable/index.html
 
 ## Theme:
 
-Here is the theme for the 2024 Rhodes Game Jam:
-
-<p align="center">
-<img src="THEME.png" alt="Stay in Your Lane" width="450"/>
-</p>
+MAGIC!!
 
 ## Step 4: Play your game!!
 

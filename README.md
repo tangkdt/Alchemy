@@ -1,6 +1,6 @@
 # Rhodes Game Jam 2024
 
-So you want to do a game jam? Maybe you have a few questions and doubts. Lucky for you, I've been talking to my cat Pleakley about the game jam for a while now. I've transcribed our conversations, which you may find beneficial:
+So you want to do a game jam? Maybe you have a few questions and doubts. Lucky for you, I've been talking to my cat Pleakley about the game jam for a while now. I've transcribed our conversations, which you may find helpful:
 
 **Pleakley:** So what's a game jam?
 

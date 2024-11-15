@@ -19,11 +19,6 @@ If you've never heard of git, be not afraid! Many people have figured out how to
 
 https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
-## Game Jam Support Staff Hours
-* Friday, 3-6 PM (Jace)
-* Saturday, 10-2 PM (Jace)
-* Sunday, 12:30-3 PM (Jace)
-
 ## Step 2 (optional): Download Godot
 
 Godot is an open-source, community supported game engine. A game engine does all the "hard" work that we don't want to worry about, like collisions, physics, and graphics. You can download it here:
@@ -61,7 +56,18 @@ Play the game as you go. Let a conversation between you and the game begin. What
 
 ## Step 5: Submit your game!!
 
-[link to instructions for exporting a project]
+https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html
+
+## I Still Don't Know Where to Start
+
+* Find/make art assets to the game (look for Sprite2D's and replace their Textures)
+* Learn about Area2D's and Signals (can you add an Area2D that displays a message when the player enters it?)
+* Create your own game mode!
+
+## Game Jam Support Staff Hours
+* Friday, 3-6 PM (Jace)
+* Saturday, 10-2 PM (Jace)
+* Sunday, 12:30-3 PM (Jace)
 
 ## Game Jame PERKS
 * Snacks!!

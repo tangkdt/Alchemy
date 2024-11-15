@@ -1,6 +1,6 @@
 # Rhodes Game Jam 2024
 
-So you want to do a game jam? Maybe you have a few questions and doubts. Lucky for you, I've been talking to my cat Pleakley about the game jam for a while now. I've transcribed our conversations, which you may find beneficial:
+So you want to do a game jam? Maybe you have a few questions and doubts. Lucky for you, I've been talking to my cat Pleakley about the game jam for a while now. I've transcribed our conversations, which you may find helpful:
 
 **Pleakley:** So what's a game jam?
 
@@ -31,7 +31,7 @@ Godot has a high learning curve on its own. You will need to think about functio
 
 https://docs.godotengine.org/en/stable/index.html
 
-**Pleakley:** Ok, so I've got the basics down for Godot. I've opened your starter game as a project, and I hit the play button to play the game. But what now? How on earth do you expect to _make a game_???
+**Pleakley:** Ok, so I've got the basics down for Godot. I've opened your starter game as a project, and I hit the play button to play the game. But what now? How on earth do you expect me to _make a game_???
 
 **Jace:** Pleakley, have more faith in yourself! I've got some hard-earned tips that will make it easier for you to achieve your goal:
 
@@ -47,7 +47,9 @@ https://docs.godotengine.org/en/stable/index.html
 
 ## Theme:
 
-The theme is the title of the starter game. If you are using the starter game, you will find it as soon as you press the play button. If you aren't using it and don't want to install godot and clone the repo. you can find it by looking for **the text field from name="Name"** in **_common/start_screen.tscn**.
+Here is the theme for the 2024 Rhodes Game Jam:
+
+![Stay in Your Lane](THEME.png "THEME")
 
 
 ## Step 4: Play your game!!

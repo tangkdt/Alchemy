@@ -31,7 +31,7 @@ Godot has a high learning curve on its own. You will need to think about functio
 
 https://docs.godotengine.org/en/stable/index.html
 
-**Pleakley:** Ok, so I've got the basics down for Godot. I've opened your starter game as a project, and I hit the play button to play the game. But what now? How on earth do you expect to _make a game_???
+**Pleakley:** Ok, so I've got the basics down for Godot. I've opened your starter game as a project, and I hit the play button to play the game. But what now? How on earth do you expect me to _make a game_???
 
 **Jace:** Pleakley, have more faith in yourself! I've got some hard-earned tips that will make it easier for you to achieve your goal:
 

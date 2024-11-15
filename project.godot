@@ -22,6 +22,10 @@ SceneManager="*res://_autoload/scene_manager.gd"
 Events="*res://_autoload/events.gd"
 Random="*res://_autoload/random.gd"
 
+[dotnet]
+
+project/assembly_name="BareBones"
+
 [gui]
 
 theme/custom="res://_common/main_theme.tres"

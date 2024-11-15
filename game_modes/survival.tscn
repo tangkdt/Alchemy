@@ -1,26 +1,26 @@
 [gd_scene load_steps=15 format=3 uid="uid://3j0n2a5idx1x"]
 
-[ext_resource type="Script" path="res://lanes.gd" id="1_57lma"]
-[ext_resource type="Texture2D" uid="uid://buxlufc86is5u" path="res://icon.svg" id="2_nok2y"]
-[ext_resource type="Script" path="res://spawner.gd" id="3_d68tj"]
-[ext_resource type="Script" path="res://entity.gd" id="4_kkk63"]
-[ext_resource type="Script" path="res://entity_data.gd" id="5_6ne8n"]
-[ext_resource type="Script" path="res://movement_controller.gd" id="5_d2ccb"]
-[ext_resource type="Shader" path="res://_common/shaders/dotted_circle_outline.gdshader" id="6_3rw37"]
-[ext_resource type="PackedScene" uid="uid://br5gcmmu5hjyt" path="res://_common/game_over_menu.tscn" id="8_kdh4i"]
-[ext_resource type="PackedScene" uid="uid://cdm80x5f7vpis" path="res://_common/escape_menu.tscn" id="9_lyvr4"]
-[ext_resource type="PackedScene" uid="uid://b2rr25mgugo3y" path="res://_common/victory_menu.tscn" id="10_gvk4x"]
-[ext_resource type="Script" path="res://survival_score.gd" id="11_hehsu"]
+[ext_resource type="Script" path="res://level/lanes.gd" id="1_6v0rf"]
+[ext_resource type="Texture2D" uid="uid://buxlufc86is5u" path="res://icon.svg" id="2_0clje"]
+[ext_resource type="Script" path="res://level/spawner.gd" id="3_qfavl"]
+[ext_resource type="Script" path="res://entities/entity.gd" id="4_uvoth"]
+[ext_resource type="Script" path="res://entities/entity_data.gd" id="5_im304"]
+[ext_resource type="Script" path="res://_common/controllers/movement_controller.gd" id="6_ctssw"]
+[ext_resource type="Shader" path="res://_common/shaders/dotted_circle_outline.gdshader" id="7_ve8hu"]
+[ext_resource type="PackedScene" uid="uid://br5gcmmu5hjyt" path="res://_common/game_over_menu.tscn" id="8_7p68o"]
+[ext_resource type="PackedScene" uid="uid://cdm80x5f7vpis" path="res://_common/escape_menu.tscn" id="9_b7sjp"]
+[ext_resource type="PackedScene" uid="uid://b2rr25mgugo3y" path="res://_common/victory_menu.tscn" id="10_iwowa"]
+[ext_resource type="Script" path="res://level/survival_score.gd" id="11_kdc8j"]
 
 [sub_resource type="Resource" id="Resource_umson"]
-script = ExtResource("5_6ne8n")
+script = ExtResource("5_im304")
 size = Vector2(64, 64)
 direction = Vector2(0, 0)
 speed = 100.0
 health = 100.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yehvx"]
-shader = ExtResource("6_3rw37")
+shader = ExtResource("7_ve8hu")
 shader_parameter/color = Color(1, 1, 1, 1)
 shader_parameter/diameter = 1.0
 shader_parameter/thickness = 0.05
@@ -35,18 +35,18 @@ radius = 62.2896
 [node name="Survival" type="Node2D"]
 
 [node name="Lanes" type="Node2D" parent="."]
-script = ExtResource("1_57lma")
+script = ExtResource("1_6v0rf")
 
 [node name="Lane" type="Node2D" parent="Lanes"]
 position = Vector2(279, 832)
 
 [node name="Sprite2D" type="Sprite2D" parent="Lanes/Lane"]
 scale = Vector2(1, 10)
-texture = ExtResource("2_nok2y")
+texture = ExtResource("2_0clje")
 
 [node name="Spawner" type="Node2D" parent="Lanes/Lane"]
 position = Vector2(0, -716)
-script = ExtResource("3_d68tj")
+script = ExtResource("3_qfavl")
 mean_time_between_spawn = 6.0
 
 [node name="Lane2" type="Node2D" parent="Lanes"]
@@ -54,22 +54,22 @@ position = Vector2(405, 832)
 
 [node name="Sprite2D" type="Sprite2D" parent="Lanes/Lane2"]
 scale = Vector2(1, 10)
-texture = ExtResource("2_nok2y")
+texture = ExtResource("2_0clje")
 
 [node name="Spawner" type="Node2D" parent="Lanes/Lane2"]
 position = Vector2(0, -716)
-script = ExtResource("3_d68tj")
+script = ExtResource("3_qfavl")
 
 [node name="Lane3" type="Node2D" parent="Lanes"]
 position = Vector2(534, 832)
 
 [node name="Sprite2D" type="Sprite2D" parent="Lanes/Lane3"]
 scale = Vector2(1, 10)
-texture = ExtResource("2_nok2y")
+texture = ExtResource("2_0clje")
 
 [node name="Spawner" type="Node2D" parent="Lanes/Lane3"]
 position = Vector2(0, -716)
-script = ExtResource("3_d68tj")
+script = ExtResource("3_qfavl")
 mean_time_between_spawn = 12.0
 
 [node name="Lane4" type="Node2D" parent="Lanes"]
@@ -77,19 +77,19 @@ position = Vector2(663, 832)
 
 [node name="Sprite2D" type="Sprite2D" parent="Lanes/Lane4"]
 scale = Vector2(1, 10)
-texture = ExtResource("2_nok2y")
+texture = ExtResource("2_0clje")
 
 [node name="Spawner" type="Node2D" parent="Lanes/Lane4"]
 position = Vector2(0, -716)
-script = ExtResource("3_d68tj")
+script = ExtResource("3_qfavl")
 mean_time_between_spawn = 4.0
 
 [node name="Player" type="Node2D" parent="." groups=["player"]]
-script = ExtResource("4_kkk63")
+script = ExtResource("4_uvoth")
 data = SubResource("Resource_umson")
 
 [node name="Movement" type="Node" parent="Player"]
-script = ExtResource("5_d2ccb")
+script = ExtResource("6_ctssw")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
@@ -98,7 +98,7 @@ position = Vector2(1234, 861)
 
 [node name="Sprite2D" type="Sprite2D" parent="VictoryZone"]
 material = SubResource("ShaderMaterial_yehvx")
-texture = ExtResource("2_nok2y")
+texture = ExtResource("2_0clje")
 
 [node name="Area2D" type="Area2D" parent="VictoryZone" groups=["victory_zone"]]
 
@@ -107,12 +107,12 @@ shape = SubResource("CircleShape2D_s8gic")
 
 [node name="PopUpMenus" type="CanvasLayer" parent="."]
 
-[node name="GameOverScreen" parent="PopUpMenus" instance=ExtResource("8_kdh4i")]
+[node name="GameOverScreen" parent="PopUpMenus" instance=ExtResource("8_7p68o")]
 visible = false
 
-[node name="EscapeMenu" parent="PopUpMenus" instance=ExtResource("9_lyvr4")]
+[node name="EscapeMenu" parent="PopUpMenus" instance=ExtResource("9_b7sjp")]
 
-[node name="VictoryScreen" parent="PopUpMenus" instance=ExtResource("10_gvk4x")]
+[node name="VictoryScreen" parent="PopUpMenus" instance=ExtResource("10_iwowa")]
 visible = false
 
 [node name="Displays" type="CanvasLayer" parent="."]
@@ -137,4 +137,4 @@ text = "Score:"
 [node name="Score" type="Label" parent="Displays/ScoreDisplay"]
 layout_mode = 2
 text = "000"
-script = ExtResource("11_hehsu")
+script = ExtResource("11_kdc8j")

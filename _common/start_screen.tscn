@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cs08dwnrlb8sc"]
+[gd_scene load_steps=8 format=3 uid="uid://cs08dwnrlb8sc"]
 
 [ext_resource type="Script" path="res://_common/start_screen.gd" id="1_p0qrx"]
 [ext_resource type="Theme" uid="uid://5vaqpc5yciov" path="res://_common/main_theme.tres" id="2_jovfd"]
 [ext_resource type="Shader" path="res://_common/shaders/scrolling_background.gdshader" id="2_p6cbr"]
-[ext_resource type="PackedScene" uid="uid://bt7xwqlqfnnnp" path="res://_common/Menu.tscn" id="5_obe8r"]
-[ext_resource type="Texture2D" uid="uid://buxlufc86is5u" path="res://icon.svg" id="6_d78v2"]
+[ext_resource type="Texture2D" uid="uid://c6anq5o4o1mmw" path="res://_common/Backgrounds/background.webp" id="3_ccpx5"]
+[ext_resource type="FontFile" uid="uid://cudet3qxqwg18" path="res://FredokaOne-Regular.ttf" id="5_5l4rd"]
+[ext_resource type="PackedScene" uid="uid://c756tokaad1q3" path="res://_common/Menu.tscn" id="5_obe8r"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qhfm8"]
 shader = ExtResource("2_p6cbr")
@@ -24,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_d78v2")
+texture = ExtResource("3_ccpx5")
 expand_mode = 3
 stretch_mode = 1
 
@@ -41,8 +42,9 @@ theme = ExtResource("2_jovfd")
 [node name="Name" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("5_5l4rd")
 theme_override_font_sizes/font_size = 50
-text = "Stay in Your Lane"
+text = "Alchemy"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]

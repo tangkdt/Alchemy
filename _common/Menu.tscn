@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bt7xwqlqfnnnp"]
+[gd_scene load_steps=7 format=3 uid="uid://c756tokaad1q3"]
 
 [ext_resource type="Script" path="res://_common/pouch.gd" id="1_e0qkq"]
 [ext_resource type="Texture2D" uid="uid://sn1or6gg7iy7" path="res://sprites/Pouch.png" id="1_mer1t"]

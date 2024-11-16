@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dc8ec3y15l0p7"]
 
 [ext_resource type="Script" path="res://container.gd" id="1_5rhb0"]
-[ext_resource type="Texture2D" path="res://_common/sprites/potion.png" id="2_qj5ti"]
+[ext_resource type="Texture2D" uid="uid://2bn2nix0tm1w" path="res://sprites/potion.png" id="2_lk2df"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8b0ap"]
 radius = 38.0
@@ -15,7 +15,7 @@ offset_left = 537.0
 offset_top = 173.0
 offset_right = 825.0
 offset_bottom = 429.0
-texture = ExtResource("2_qj5ti")
+texture = ExtResource("2_lk2df")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, 1)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0cj65pwfp6be"]
 
 [ext_resource type="Script" path="res://item.gd" id="1_ujkj5"]
-[ext_resource type="Texture2D" path="res://_common/sprites/redDust.webp" id="2_65g3n"]
-[ext_resource type="AudioStream" path="res://_common/sounds/water-splash.mp3" id="3_7owlb"]
+[ext_resource type="Texture2D" uid="uid://036tltwvbkbl" path="res://sprites/redDust.webp" id="2_pbvqa"]
+[ext_resource type="AudioStream" uid="uid://de500b4bc6vup" path="res://_common/sounds/glass-clinking-241043.mp3" id="3_1n8e2"]
 
 [node name="Item" type="Control"]
 layout_mode = 3
@@ -13,12 +13,14 @@ script = ExtResource("1_ujkj5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 461.0
+offset_top = 238.0
+offset_right = 821.0
+offset_bottom = 598.0
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_65g3n")
+texture = ExtResource("2_pbvqa")
 
 [node name="DropSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_7owlb")
+stream = ExtResource("3_1n8e2")
 
 [connection signal="finished" from="DropSound" to="." method="timeout"]

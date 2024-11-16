@@ -1,7 +1,6 @@
 class_name StartScreen
 extends GameMenu
 
-
 func _load_game_mode_1():
 	SceneManager.load_game_mode(0)
 

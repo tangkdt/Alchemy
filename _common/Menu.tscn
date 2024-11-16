@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://bt7xwqlqfnnnp"]
+
+[ext_resource type="Script" path="res://_common/pouch.gd" id="1_e0qkq"]
+[ext_resource type="Texture2D" uid="uid://sn1or6gg7iy7" path="res://sprites/Pouch.png" id="1_mer1t"]
+[ext_resource type="Texture2D" uid="uid://cyvm43w2ch173" path="res://sprites/Bitcoin.png" id="3_b54ha"]
+[ext_resource type="FontFile" uid="uid://cudet3qxqwg18" path="res://FredokaOne-Regular.ttf" id="4_6541l"]
+[ext_resource type="Texture2D" uid="uid://crkip3ayyuheu" path="res://sprites/Payment.png" id="4_ppkkh"]
+[ext_resource type="Texture2D" uid="uid://xcclqewtugtr" path="res://sprites/Yen.png" id="5_6b6ch"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_top = 1.0
+offset_right = 40.0
+offset_bottom = 41.0
+texture_normal = ExtResource("1_mer1t")
+texture_pressed = ExtResource("1_mer1t")
+texture_hover = ExtResource("1_mer1t")
+texture_disabled = ExtResource("1_mer1t")
+texture_focused = ExtResource("1_mer1t")
+script = ExtResource("1_e0qkq")
+
+[node name="Panel" type="Panel" parent="TextureButton"]
+visible = false
+layout_mode = 0
+offset_left = -2.0
+offset_top = 125.0
+offset_right = 471.0
+offset_bottom = 531.0
+
+[node name="BitcoinImg" type="Sprite2D" parent="TextureButton/Panel"]
+position = Vector2(4.83966, 18.7263)
+scale = Vector2(0.724101, 0.71907)
+texture = ExtResource("3_b54ha")
+offset = Vector2(44.75, 52.51)
+
+[node name="DollarImg" type="Sprite2D" parent="TextureButton/Panel"]
+position = Vector2(41, 151)
+scale = Vector2(0.71875, 0.71875)
+texture = ExtResource("4_ppkkh")
+
+[node name="YenImg" type="Sprite2D" parent="TextureButton/Panel"]
+position = Vector2(43, 247)
+scale = Vector2(0.708333, 0.739583)
+texture = ExtResource("5_6b6ch")
+
+[node name="BitcoinCount" type="Label" parent="TextureButton/Panel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 45.0
+offset_right = 131.0
+offset_bottom = 87.0
+theme_override_fonts/font = ExtResource("4_6541l")
+text = "x99"
+
+[node name="YenCount" type="Label" parent="TextureButton/Panel"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 232.0
+offset_right = 146.0
+offset_bottom = 274.0
+theme_override_fonts/font = ExtResource("4_6541l")
+text = "x99"
+
+[node name="DollarCount" type="Label" parent="TextureButton/Panel"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 140.0
+offset_right = 151.0
+offset_bottom = 182.0
+theme_override_fonts/font = ExtResource("4_6541l")
+text = "x99"
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

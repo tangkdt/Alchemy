@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cs08dwnrlb8sc"]
+[gd_scene load_steps=7 format=3 uid="uid://cs08dwnrlb8sc"]
 
 [ext_resource type="Script" path="res://_common/start_screen.gd" id="1_p0qrx"]
 [ext_resource type="Theme" uid="uid://5vaqpc5yciov" path="res://_common/main_theme.tres" id="2_jovfd"]
 [ext_resource type="Shader" path="res://_common/shaders/scrolling_background.gdshader" id="2_p6cbr"]
+[ext_resource type="PackedScene" uid="uid://bt7xwqlqfnnnp" path="res://_common/Menu.tscn" id="5_obe8r"]
 [ext_resource type="Texture2D" uid="uid://buxlufc86is5u" path="res://icon.svg" id="6_d78v2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qhfm8"]
@@ -76,6 +77,8 @@ text = "Exit"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
+
+[node name="Node2D" parent="." instance=ExtResource("5_obe8r")]
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/GameMode1" to="." method="_load_game_mode_1"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/GameMode2" to="." method="_load_game_mode_2"]
